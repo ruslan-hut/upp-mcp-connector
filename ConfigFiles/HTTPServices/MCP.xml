@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<HTTPService uuid="580d7540-a1ed-43ef-82c3-9543e7c6568c">
+		<Properties>
+			<Name>MCP</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>MCP</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<RootURL>mcp</RootURL>
+			<ReuseSessions>AutoUse</ReuseSessions>
+			<SessionMaxAge>20</SessionMaxAge>
+		</Properties>
+		<ChildObjects>
+			<URLTemplate uuid="499cf444-19bc-459c-950f-ab906843f97e">
+				<Properties>
+					<Name>Health</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Health</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/health</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="d9cdb289-5765-459f-b56b-befc79d5df0a">
+						<Properties>
+							<Name>Get</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Get</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>HealthCheck</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="96285e77-4bc3-4e45-83a0-722926b9fdd3">
+				<Properties>
+					<Name>AuthVerify</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Auth verify</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/auth/verify</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="bc60218a-a81c-45c2-8054-c59aef8cccaa">
+						<Properties>
+							<Name>Post</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Post</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>AuthVerify</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="a13f9605-7f7b-47a6-9b0c-8e688bcb4254">
+				<Properties>
+					<Name>Resolve</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Resolve</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/resolve/{entity}</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="e2ede0d1-9b86-43f7-ab43-b61d7d6c4735">
+						<Properties>
+							<Name>Post</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Post</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>ResolveEntity</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="fa516033-1cf7-4d38-8487-814d38ba0399">
+				<Properties>
+					<Name>Reports</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Reports</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/reports/{type}</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="c39d985c-afdd-4b3f-9320-77d8eeacf039">
+						<Properties>
+							<Name>Post</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Post</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>ReportsType</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="f319b3cb-e0da-4cf9-ad38-75a909b80650">
+				<Properties>
+					<Name>Admin</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Admin</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/admin/{action}</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="1df9765c-2675-49b5-b89c-17db883174c0">
+						<Properties>
+							<Name>Post</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Post</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>Admin</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+		</ChildObjects>
+	</HTTPService>
+</MetaDataObject>
